@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-// const MONGO_URL = process.env.URL;
-// console.log(MONGO_URL);
 mongoose.set("strictQuery", false);
 exports.connect = () => {
   mongoose

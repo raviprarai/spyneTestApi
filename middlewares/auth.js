@@ -30,7 +30,6 @@ const verifyTokenAndUser = async (req, res, next) => {
       authHeader = authHeader.split(" ");
       const token = authHeader[1];
       if (!token) {
-        // await User.findByIdAndUpdate(getuser._id, { activeStatus: "offline" },{new:true});
         return res
           .status(403)
           .send({ message: "A token is required for authentication" });
@@ -42,7 +41,6 @@ const verifyTokenAndUser = async (req, res, next) => {
         const user = await User.findById(getuser._id);
         console.log(user);
         if (!user) {
-          // await User.findByIdAndUpdate(getuser._id, { activeStatus: "offline" },{new:true});
           return res.status(403).json({
             status: 0,
             message: "You are not  user.!",
